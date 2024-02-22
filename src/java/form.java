@@ -32,6 +32,12 @@ public class form extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             System.out.println(request.getParameter("name"));
+            System.out.println(request.getParameter("email"));
+            
+            request.getRequestDispatcher("/test.jsp").forward(request, response);
+            
+            
+           
         }
     }
 
